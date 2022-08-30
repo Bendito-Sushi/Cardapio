@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="img/logofavicon.png" type="image/x-icon">
+    <title>Bendito Sushi</title>
+    <script defer src="js/mostrarPedido.js"></script>
+    <script defer src="js/alternarExibicao.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho-titulo">Bendito Sushi</h1>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Entrada</h3>
+                <button class="conteudo-categoria-botao" id="botao-entrada" onClick="alternarExibicao('container-entrada', 'botao-entrada')">+</button>
+            </div>
+
+            <div id="container-entrada">
+                <div>
+                    <h4>Sunomono</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(0)">-</button>
+                        <input class="numero" type="number" value="0" id="input0">
+                        <button class="botao-item-clicar" onClick="adicionarItem(0)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Ceviche Salmão</h4>
+                    <p>R$: 20,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(1)">-</button>
+                        <input class="numero" type="number" value="0" id="input1">
+                        <button class="botao-item-clicar" onClick="adicionarItem(1)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Ceviche Atum</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(2)">-</button>
+                        <input class="numero" type="number" value="0" id="input2">
+                        <button class="botao-item-clicar" onClick="adicionarItem(2)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Ceviche Peixe Branco</h4>
+                    <p>R$: 18,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(3)">-</button>
+                        <input class="numero" type="number" value="0" id="input3">
+                        <button class="botao-item-clicar" onClick="adicionarItem(3)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Makimonos</h3>
+                <button class="conteudo-categoria-botao" id="botao-makimonos" onClick="alternarExibicao('container-makimonos', 'botao-makimonos')">+</button>
+            </div>
+
+            <div id="container-makimonos">
+                <div>
+                    <h4>Filadélfia Skin (10 unidades)</h4>
+                    <p>Alga, arroz, cream chesse e skin (pele de salmão frita).</p>
+                    <p>R$: 8,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(4)">-</button>
+                        <input class="numero" type="number" value="0" id="input4">
+                        <button class="botao-item-clicar" onClick="adicionarItem(4)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Filadélfia Salmão (10 unidades)</h4>
+                    <p>Alga, arroz, cream chesse e salmão.</p>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(5)">-</button>
+                        <input class="numero" type="number" value="0" id="input5">
+                        <button class="botao-item-clicar" onClick="adicionarItem(5)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Filadélfia Atum (10 unidades)</h4>
+                    <p>Alga, arroz, cream chesse e atum.</p>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(6)">-</button>
+                        <input class="numero" type="number" value="0" id="input6">
+                        <button class="botao-item-clicar" onClick="adicionarItem(6)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Filadélfia Camarão (10 unidades)</h4>
+                    <p>Alga, arroz, cream chesse e camarão.</p>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(7)">-</button>
+                        <input class="numero" type="number" value="0" id="input7">
+                        <button class="botao-item-clicar" onClick="adicionarItem(7)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Uramaki</h3>
+                <button class="conteudo-categoria-botao" id="botao-uramaki" onClick="alternarExibicao('container-uramaki', 'botao-uramaki')">+</button>
+            </div>
+
+            <div id="container-uramaki">
+                <div>
+                    <h4>Uramaki Califórnia (10 unidades)</h4>
+                    <p>Alga, arroz, gergelim, manga, kani e pepino japonês.</p>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(8)">-</button>
+                        <input class="numero" type="number" value="0" id="input8">
+                        <button class="botao-item-clicar" onClick="adicionarItem(8)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Uramaki Salmão (10 unidades)</h4>
+                    <p>Alga, arroz, gergelim, cream chesse e salmão.</p>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(9)">-</button>
+                        <input class="numero" type="number" value="0" id="input9">
+                        <button class="botao-item-clicar" onClick="adicionarItem(9)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Uramaki Atum (10 unidades)</h4>
+                    <p>Alga, arroz, gergelim, cream chesse e atum.</p>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(10)">-</button>
+                        <input class="numero" type="number" value="0" id="input10">
+                        <button class="botao-item-clicar" onClick="adicionarItem(10)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Uramaki Camarão (10 unidades)</h4>
+                    <p>Alga, arroz, gergelim, cream chesse e camarão.</p>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(11)">-</button>
+                        <input class="numero" type="number" value="0" id="input11">
+                        <button class="botao-item-clicar" onClick="adicionarItem(11)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Uramaki Skin (10 unidades)</h4>
+                    <p>Alga, arroz, gergelim, cream chesse e pele de salmão frita.</p>
+                    <p>R$: 8,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(12)">-</button>
+                        <input class="numero" type="number" value="0" id="input12">
+                        <button class="botao-item-clicar" onClick="adicionarItem(12)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Niguiri</h3>
+                <button class="conteudo-categoria-botao" id="botao-niguiri" onClick="alternarExibicao('container-niguiri', 'botao-niguiri')">+</button>
+            </div>
+
+            <div id="container-niguiri">
+                <div>
+                    <h4>Niguiri Salmão (5 unidades)</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(13)">-</button>
+                        <input class="numero" type="number" value="0" id="input13">
+                        <button class="botao-item-clicar" onClick="adicionarItem(13)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Niguiri Atum (5 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(14)">-</button>
+                        <input class="numero" type="number" value="0" id="input14">
+                        <button class="botao-item-clicar" onClick="adicionarItem(14)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Niguiri Peixe Branco (5 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(15)">-</button>
+                        <input class="numero" type="number" value="0" id="input15">
+                        <button class="botao-item-clicar" onClick="adicionarItem(15)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Salmão Ice</h3>
+                <button class="conteudo-categoria-botao" id="botao-salmaoice" onClick="alternarExibicao('container-salmaoice', 'botao-salmaoice')">+</button>
+            </div>
+
+            <div id="container-salmaoice">
+                <div>
+                    <h4>Salmão Ice (5 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(16)">-</button>
+                        <input class="numero" type="number" value="0" id="input16">
+                        <button class="botao-item-clicar" onClick="adicionarItem(16)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Salmão Ice Geleia de Pimenta (5 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(17)">-</button>
+                        <input class="numero" type="number" value="0" id="input17">
+                        <button class="botao-item-clicar" onClick="adicionarItem(17)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Salmão Ice Flambado (5 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(18)">-</button>
+                        <input class="numero" type="number" value="0" id="input18">
+                        <button class="botao-item-clicar" onClick="adicionarItem(18)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Salmão Ice Flambado Geleia de Pimenta (5 unidades)</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(19)">-</button>
+                        <input class="numero" type="number" value="0" id="input19">
+                        <button class="botao-item-clicar" onClick="adicionarItem(19)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Jow Jow</h3>
+                <button class="conteudo-categoria-botao" id="botao-jowjow" onClick="alternarExibicao('container-jowjow', 'botao-jowjow')">+</button>
+            </div>
+
+            <div id="container-jowjow">
+                <div>
+                    <h4>Jow Jow Salmão (5 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(20)">-</button>
+                        <input class="numero" type="number" value="0" id="input20">
+                        <button class="botao-item-clicar" onClick="adicionarItem(20)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Jow Jow Atum (5 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(21)">-</button>
+                        <input class="numero" type="number" value="0" id="input21">
+                        <button class="botao-item-clicar" onClick="adicionarItem(21)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Jow Jow Peixe Branco (5 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(22)">-</button>
+                        <input class="numero" type="number" value="0" id="input22">
+                        <button class="botao-item-clicar" onClick="adicionarItem(22)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Jow Jow Camarão (5 unidades)</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(23)">-</button>
+                        <input class="numero" type="number" value="0" id="input23">
+                        <button class="botao-item-clicar" onClick="adicionarItem(23)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Jow Jow Skin (5 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(24)">-</button>
+                        <input class="numero" type="number" value="0" id="input24">
+                        <button class="botao-item-clicar" onClick="adicionarItem(24)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Sashimi</h3>
+                <button class="conteudo-categoria-botao" id="botao-sashimi" onClick="alternarExibicao('container-sashimi', 'botao-sashimi')">+</button>
+            </div>
+
+            <div id="container-sashimi">
+                <div>
+                    <h4>Sashimi Salmão (5 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(25)">-</button>
+                        <input class="numero" type="number" value="0" id="input25">
+                        <button class="botao-item-clicar" onClick="adicionarItem(25)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sashimi Atum (5 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(26)">-</button>
+                        <input class="numero" type="number" value="0" id="input26">
+                        <button class="botao-item-clicar" onClick="adicionarItem(26)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sashimi Peixe Branco (5 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(27)">-</button>
+                        <input class="numero" type="number" value="0" id="input27">
+                        <button class="botao-item-clicar" onClick="adicionarItem(27)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Temaki</h3>
+                <button class="conteudo-categoria-botao" id="botao-temaki" onClick="alternarExibicao('container-temaki', 'botao-temaki')">+</button>
+            </div>
+
+            <div id="container-temaki">
+                <div>
+                    <h4>Temaki Salmão (1 unidade)</h4>
+                    <p>R$: 25,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(28)">-</button>
+                        <input class="numero" type="number" value="0" id="input28">
+                        <button class="botao-item-clicar" onClick="adicionarItem(28)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Atum (1 unidade)</h4>
+                    <p>R$: 17,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(29)">-</button>
+                        <input class="numero" type="number" value="0" id="input29">
+                        <button class="botao-item-clicar" onClick="adicionarItem(29)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Camarão (1 unidade)</h4>
+                    <p>R$: 28,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(30)">-</button>
+                        <input class="numero" type="number" value="0" id="input30">
+                        <button class="botao-item-clicar" onClick="adicionarItem(30)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Califórnia (1 unidade)</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(31)">-</button>
+                        <input class="numero" type="number" value="0" id="input31">
+                        <button class="botao-item-clicar" onClick="adicionarItem(31)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Skin (1 unidade)</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(32)">-</button>
+                        <input class="numero" type="number" value="0" id="input32">
+                        <button class="botao-item-clicar" onClick="adicionarItem(32)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Fritos</h3>
+                <button class="conteudo-categoria-botao" id="botao-fritos" onClick="alternarExibicao('container-fritos', 'botao-fritos')">+</button>
+            </div>
+
+            <div id="container-fritos">
+                <div>
+                    <h4>Hot Filadélfia Salmão (10 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(33)">-</button>
+                        <input class="numero" type="number" value="0" id="input33">
+                        <button class="botao-item-clicar" onClick="adicionarItem(33)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Hot Filadélfia Atum (10 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(34)">-</button>
+                        <input class="numero" type="number" value="0" id="input34">
+                        <button class="botao-item-clicar" onClick="adicionarItem(34)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Hot Filadélfia Skin (10 unidades)</h4>
+                    <p>R$: 8,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(35)">-</button>
+                        <input class="numero" type="number" value="0" id="input35">
+                        <button class="botao-item-clicar" onClick="adicionarItem(35)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Hot Salmão (1 unidade)</h4>
+                    <p>R$: 25,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(36)">-</button>
+                        <input class="numero" type="number" value="0" id="input36">
+                        <button class="botao-item-clicar" onClick="adicionarItem(36)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Hot Atum (1 unidade)</h4>
+                    <p>R$: 20,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(37)">-</button>
+                        <input class="numero" type="number" value="0" id="input37">
+                        <button class="botao-item-clicar" onClick="adicionarItem(37)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Hot Peixe Branco (1 unidade)</h4>
+                    <p>R$: 20,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(38)">-</button>
+                        <input class="numero" type="number" value="0" id="input38">
+                        <button class="botao-item-clicar" onClick="adicionarItem(38)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Hot Camarão (1 unidade)</h4>
+                    <p>R$: 25,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(39)">-</button>
+                        <input class="numero" type="number" value="0" id="input39">
+                        <button class="botao-item-clicar" onClick="adicionarItem(39)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Temaki Hot Skin (1 unidade)</h4>
+                    <p>R$: 18,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(40)">-</button>
+                        <input class="numero" type="number" value="0" id="input40">
+                        <button class="botao-item-clicar" onClick="adicionarItem(40)">+</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Combos</h3>
+                <button class="conteudo-categoria-botao" id="botao-combos" onClick="alternarExibicao('container-combos', 'botao-combos')">+</button>
+            </div>
+
+            <div id="container-combos">
+                <div>
+                    <h4>Combo I</h4>
+                    <p>10 filadélfia skin, 10 uramaki califórnia, 10 hot filadélfia, 5 sashimi salmão.</p>
+                    <p>R$: 45,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(41)">-</button>
+                        <input class="numero" type="number" value="0" id="input41">
+                        <button class="botao-item-clicar" onClick="adicionarItem(41)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Combo II</h4>
+                    <p>10 filadélfia salmão, 10 uramaki camarão, 10 uramaki skin, 10 hot filadélfia, 5 sashimi atum.</p>
+                    <p>R$: 55,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(42)">-</button>
+                        <input class="numero" type="number" value="0" id="input42">
+                        <button class="botao-item-clicar" onClick="adicionarItem(42)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Combo III</h4>
+                    <p>10 sashimi salmão, 10 sashimi atum, 5 salmão ice, 5 jow jow, 10 hot atum.</p>
+                    <p>R$: 60,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(43)">-</button>
+                        <input class="numero" type="number" value="0" id="input43">
+                        <button class="botao-item-clicar" onClick="adicionarItem(43)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Combo IV</h4>
+                    <p>5 sashimi salmão, 5 sashimi atum, 5 sashimi peixe branco, 5 niguiri salmão, 5 salmão ice, 5 jow jow, 1 temaki atum.</p>
+                    <p>R$: 65,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(44)">-</button>
+                        <input class="numero" type="number" value="0" id="input44">
+                        <button class="botao-item-clicar" onClick="adicionarItem(44)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Combo V</h4>
+                    <p>20 filadélfia salmão, 10 filadélfia atum, 10 uramaki camarão, 5 sashimi atum, 5 sashimi salmão, 5 sashimi peixe branco, 10 hot filadélfia.</p>
+                    <p>R$: 80,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(45)">-</button>
+                        <input class="numero" type="number" value="0" id="input45">
+                        <button class="botao-item-clicar" onClick="adicionarItem(45)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Yakisobas</h3>
+                <button class="conteudo-categoria-botao" id="botao-yakisobas" onClick="alternarExibicao('container-yakisobas', 'botao-yakisobas')">+</button>
+            </div>
+
+            <div id="container-yakisobas">
+                <div>
+                    <h4>Yakisoba Camarão</h4>
+                    <p>R$: 30,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(46)">-</button>
+                        <input class="numero" type="number" value="0" id="input46">
+                        <button class="botao-item-clicar" onClick="adicionarItem(46)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Yakisoba Salmão</h4>
+                    <p>R$: 35,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(47)">-</button>
+                        <input class="numero" type="number" value="0" id="input47">
+                        <button class="botao-item-clicar" onClick="adicionarItem(47)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Yakisoba Carne</h4>
+                    <p>R$: 30,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(48)">-</button>
+                        <input class="numero" type="number" value="0" id="input48">
+                        <button class="botao-item-clicar" onClick="adicionarItem(48)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Yakisoba Frango</h4>
+                    <p>R$: 25,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(49)">-</button>
+                        <input class="numero" type="number" value="0" id="input49">
+                        <button class="botao-item-clicar" onClick="adicionarItem(49)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Yakisoba Legumes</h4>
+                    <p>R$: 20,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(50)">-</button>
+                        <input class="numero" type="number" value="0" id="input50">
+                        <button class="botao-item-clicar" onClick="adicionarItem(50)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Yakisoba Misto Carne e Frango</h4>
+                    <p>R$: 30,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(51)">-</button>
+                        <input class="numero" type="number" value="0" id="input51">
+                        <button class="botao-item-clicar" onClick="adicionarItem(51)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Harumakis Doces</h3>
+                <button class="conteudo-categoria-botao" id="botao-harumakisdoces" onClick="alternarExibicao('container-harumakisdoces', 'botao-harumakisdoces')">+</button>
+            </div>
+
+            <div id="container-harumakisdoces">
+                <div>
+                    <h4>Harumaki Romeu e Julieta (2 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(52)">-</button>
+                        <input class="numero" type="number" value="0" id="input52">
+                        <button class="botao-item-clicar" onClick="adicionarItem(52)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Harumaki Doce de Leite (2 unidades)</h4>
+                    <p>R$: 10,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(53)">-</button>
+                        <input class="numero" type="number" value="0" id="input53">
+                        <button class="botao-item-clicar" onClick="adicionarItem(53)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Harumaki Baton Preto (2 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(54)">-</button>
+                        <input class="numero" type="number" value="0" id="input54">
+                        <button class="botao-item-clicar" onClick="adicionarItem(54)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Harumaki Baton Branco (2 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(55)">-</button>
+                        <input class="numero" type="number" value="0" id="input55">
+                        <button class="botao-item-clicar" onClick="adicionarItem(55)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Harumaki Banana com Chocolate (2 unidades)</h4>
+                    <p>R$: 12,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(56)">-</button>
+                        <input class="numero" type="number" value="0" id="input56">
+                        <button class="botao-item-clicar" onClick="adicionarItem(56)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conteudo-categoria">
+
+            <div class="conteudo-categoria-titulo-botao">
+                <h3 class="conteudo-categoria-titulo">Bebidas</h3>
+                <button class="conteudo-categoria-botao" id="botao-bebidas" onClick="alternarExibicao('container-bebidas', 'botao-bebidas')">+</button>
+            </div>
+
+            <div id="container-bebidas">
+                <div>
+                    <h4>Coca-Cola 2L</h4>
+                    <p>R$: 15,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(57)">-</button>
+                        <input class="numero" type="number" value="0" id="input57">
+                        <button class="botao-item-clicar" onClick="adicionarItem(57)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Guaraná 2L</h4>
+                    <p>R$: 13,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(58)">-</button>
+                        <input class="numero" type="number" value="0" id="input58">
+                        <button class="botao-item-clicar" onClick="adicionarItem(58)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Coca-Cola Lata 350ML</h4>
+                    <p>R$: 8,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(59)">-</button>
+                        <input class="numero" type="number" value="0" id="input59">
+                        <button class="botao-item-clicar" onClick="adicionarItem(59)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Guaraná Lata 350ML</h4>
+                    <p>R$: 8,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(60)">-</button>
+                        <input class="numero" type="number" value="0" id="input60">
+                        <button class="botao-item-clicar" onClick="adicionarItem(60)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Vinho</h4>
+                    <p>R$: 100,00</p>
+                    <div class="botao-item">
+                        <button class="botao-item-clicar" onClick="removerItem(61)">-</button>
+                        <input class="numero" type="number" value="0" id="input61">
+                        <button class="botao-item-clicar" onClick="adicionarItem(61)">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-pedido">
+
+            <h2 class="rodape-pedido-titulo">Meu Pedido</h2>
+
+            <div class="rodape-pedido-itens" id="itensPedido">
+                
+            </div>
+
+            <p class="rodape-pedido-total" id="preco-final">Total: 0 R$</p>
+
+        </div>
+
+        <button class="rodape-botao" onClick="ocultarTodos(), limpaItens()">Limpar Pedido</button>
+    
+        <button class="rodape-botao" onClick="copiarPedido()">Copiar Pedido</button>
+        
+        <button class="rodape-botao" onClick="enviarPedido()">Fazer Pedido</button>
+        
+    </footer>
+    <input id="salvando-texto" type="text"> <!-- Alterar assim que possivel -->
+</body>
+</html>
